@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gallery - Keitu's Cake & Bakery</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;padding:30px}
+.gallery-item{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.1)}
+.gallery-img{width:100%;height:240px;object-fit:cover;display:block}
+.gallery-caption{padding:12px;text-align:center;font-weight:bold;color:#7a3b2e}
+</style>
+</head>
+<body>
+
+<div class="gallery-grid">
+
+<figure class="gallery-item" data-category="cakes">
+<img src="images/birthday-cake.jpg" alt="Three-tier custom birthday cake" class="gallery-img" />
+<figcaption class="gallery-caption">Custom Birthday Cake</figcaption>
+</figure>
+
+<figure class="gallery-item" data-category="cakes">
+<img src="images/wedding-cake.jpg" alt="White fondant wedding cake" class="gallery-img" />
+<figcaption class="gallery-caption">Wedding Cake</figcaption>
+</figure>
+
+<figure class="gallery-item" data-category="cakes">
+<img src="images/chocolate-cake.jpg" alt="Chocolate drip cake" class="gallery-img" />
+<figcaption class="gallery-caption">Chocolate Cake</figcaption>
+</figure>
+
+<figure class="gallery-item" data-category="cakes">
+<img src="images/kids-cake.jpg" alt="Custom themed children's cake" class="gallery-img" />
+<figcaption class="gallery-caption">Kids Themed Cake</figcaption>
+</figure>
+
+<figure class="gallery-item" data-category="cupcakes">
+<img src="images/cupcake-box.jpg" alt="Box of twelve cupcakes" class="gallery-img" />
+<figcaption class="gallery-caption">Pink & Gold Cupcake Box</figcaption>
+</figure>
+
+<figure class="gallery-item" data-category="cupcakes">
+<img src="images/floral-cupcake.jpg" alt="Cupcakes decorated with edible flowers" class="gallery-img" />
+<figcaption class="gallery-caption">Floral Cupcakes</figcaption>
+</figure>
+
+<figure class="gallery-item" data-category="cupcakes">
+<img src="images/corporate-cupcake.jpg" alt="Corporate branded cupcakes with company logo" class="gallery-img" />
+<figcaption class="gallery-caption">Corporate Branded Cupcakes</figcaption>
+</figure>
+
+<figure class="gallery-item" data-category="pastries">
+<img src="images/pastries.jpg" alt="Assorted fresh croissants and Danish pastries on a board" class="gallery-img" />
+<figcaption class="gallery-caption">Morning Pastry Selection</figcaption>
+</figure>
+
+<figure class="gallery-item" data-category="pastries">
+<img src="images/tarts-eclairs.jpg" alt="Mini tarts and eclairs arranged on a tiered tray" class="gallery-img" />
+<figcaption class="gallery-caption">Mini Tart & Eclair Platter</figcaption>
+</figure>
+
+</div>
+
+</body>
+</html>

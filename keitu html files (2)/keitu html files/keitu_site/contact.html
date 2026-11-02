@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Keitu's Cake and Bakery in Kagiso, Gauteng. Find our locations on the map or send us a message." />
+  <meta name="keywords" content="contact bakery, Kagiso bakery location, get in touch, Keitu's Cake and Bakery address" />
+  <title>Contact | Keitu's Cake and Bakery</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">🎂 Keitu's Cake &amp; Bakery</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="menu.html" class="nav-link">Menu &amp; Pricing</a></li>
+          <li><a href="enquiry.html" class="nav-link">Order / Enquiry</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Page header">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you. Reach out via the form or visit us in store.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT INFO AND MAPS SECTION -->
+    <section class="section" aria-label="Contact information and locations">
+      <div class="container">
+
+        <h2 class="section-title">Our Locations</h2>
+        <p class="section-sub">We operate from two locations in the West Rand area.</p>
+
+        <!-- Two location cards with embedded maps -->
+        <div class="locations-grid">
+
+          <!-- Location 1: Kagiso -->
+          <div class="location-card">
+            <h3>📍 Kagiso Kitchen (Main)</h3>
+            <address>
+              <p>123 Leratong Drive</p>
+              <p>Kagiso, 1754</p>
+              <p>Gauteng, South Africa</p>
+            </address>
+            <p>📞 +27 00 000 0000</p>
+            <p>⏰ Mon–Sat: 08:00 – 17:00</p>
+
+            <!-- Embedded Google Map — Location 1: Kagiso, Gauteng -->
+            <div class="map-wrapper">
+              <iframe
+                title="Keitu's Cake and Bakery — Kagiso location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28939.!2d27.8363!3d-26.3061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95a06edbf7b587%3A0x8a4ca17c16a3b!2sKagiso%2C+Krugersdorp%2C+1754!5e0!3m2!1sen!2sza!4v1"
+                width="100%"
+                height="250"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                aria-label="Google Maps showing Kagiso location">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Location 2: Soweto (pickup point) -->
+          <div class="location-card">
+            <h3>📍 Soweto Pickup Point</h3>
+            <address>
+              <p>45 Vilakazi Street</p>
+              <p>Orlando West, Soweto, 1804</p>
+              <p>Gauteng, South Africa</p>
+            </address>
+            <p>📞 +27 00 000 0001</p>
+            <p>⏰ Fri–Sun: 09:00 – 15:00 (by appointment)</p>
+
+            <!-- Embedded Google Map — Location 2: Soweto, Gauteng -->
+            <div class="map-wrapper">
+              <iframe
+                title="Keitu's Cake and Bakery — Soweto pickup point"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14474.!2d27.9!3d-26.26!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9516d0f63bf7f1%3A0x1b3aef6a9e785!2sOrlando+West%2C+Soweto%2C+1804!5e0!3m2!1sen!2sza!4v1"
+                width="100%"
+                height="250"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                aria-label="Google Maps showing Soweto pickup location">
+              </iframe>
+            </div>
+          </div>
+
+        </div><!-- end .locations-grid -->
+
+      </div>
+    </section>
+
+    <!-- GENERAL CONTACT FORM -->
+    <section class="section bg-light" aria-label="Contact form">
+      <div class="container form-container">
+
+        <h2>Send Us a Message</h2>
+        <p>Have a question that's not an order? Fill in the form and we'll respond within 24 hours.</p>
+
+        <!-- Success message area -->
+        <div id="contactMessage" class="form-message" role="alert" aria-live="polite"></div>
+
+        <!-- CONTACT FORM -->
+        <form id="contactForm" action="#" method="POST" novalidate>
+
+          <!-- Name -->
+          <div class="form-group">
+            <label for="contactName">Full Name <span class="required" aria-hidden="true">*</span></label>
+            <input type="text"
+                   id="contactName"
+                   name="contactName"
+                   placeholder="e.g. Naledi Dlamini"
+                   required
+                   minlength="2"
+                   maxlength="100"
+                   aria-required="true" />
+            <span class="error-msg" id="contactNameError" role="alert"></span>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="contactEmail">Email Address <span class="required" aria-hidden="true">*</span></label>
+            <input type="email"
+                   id="contactEmail"
+                   name="contactEmail"
+                   placeholder="e.g. naledi@email.com"
+                   required
+                   aria-required="true" />
+            <span class="error-msg" id="contactEmailError" role="alert"></span>
+          </div>
+
+          <!-- Message Type -->
+          <div class="form-group">
+            <label for="messageType">Type of Message <span class="required" aria-hidden="true">*</span></label>
+            <select id="messageType" name="messageType" required aria-required="true">
+              <option value="">-- Select message type --</option>
+              <option value="general-question">General Question</option>
+              <option value="pricing-query">Pricing Query</option>
+              <option value="delivery-question">Delivery Question</option>
+              <option value="feedback">Feedback / Compliment</option>
+              <option value="complaint">Complaint</option>
+              <option value="other">Other</option>
+            </select>
+            <span class="error-msg" id="messageTypeError" role="alert"></span>
+          </div>
+
+          <!-- Message -->
+          <div class="form-group">
+            <label for="contactMessage2">Your Message <span class="required" aria-hidden="true">*</span></label>
+            <textarea id="contactMessage2"
+                      name="contactMessage2"
+                      rows="6"
+                      placeholder="Type your message here..."
+                      required
+                      minlength="10"
+                      maxlength="1000"
+                      aria-required="true"></textarea>
+            <span class="error-msg" id="contactMessage2Error" role="alert"></span>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo">🎂 Keitu's Cake &amp; Bakery</p>
+        <p>Handcrafted with love in Kagiso, Gauteng.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="enquiry.html">Order</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <p>📍 Kagiso, Gauteng</p>
+        <p>📞 +27 00 000 0000</p>
+        <p>📧 hello@keituscakeandbakery.co.za</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Keitu's Cake and Bakery. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

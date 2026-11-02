@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Place a cake or bakery order with Keitu's Cake and Bakery. Fill in your order details and we'll get back to you within 24 hours." />
+  <meta name="keywords" content="order cake online, bakery enquiry, custom cake order Kagiso, quote request" />
+  <title>Order / Enquiry | Keitu's Cake and Bakery</title>
+  <link rel="stylesheet" href="css/style.css" />
+<style>
+body{
+background-image: url('images/bakery-bg.jpg');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+background-repeat: no-repeat;
+}
+/* Makes the form white and readable on top of picture */
+form, .order-form, .enquiry-form {
+background: rgba(255,255,255,0.92);
+padding: 20px;
+border-radius: 12px;
+max-width: 800px;
+margin: 20px auto;
+box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+</style>
+
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">🎂 Keitu's Cake &amp; Bakery</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="menu.html" class="nav-link">Menu &amp; Pricing</a></li>
+          <li><a href="enquiry.html" class="nav-link active">Order / Enquiry</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Page header">
+      <div class="container">
+        <h1>Place an Order</h1>
+        <p>Fill in the form below and we'll get back to you within 24 hours with a quote.</p>
+      </div>
+    </section>
+
+    <!-- ORDER ENQUIRY FORM -->
+    <section class="section" aria-label="Order enquiry form">
+      <div class="container form-container">
+
+        <!-- Success / error message area (populated by JavaScript) -->
+        <div id="formMessage" class="form-message" role="alert" aria-live="polite"></div>
+
+        <!-- ORDER FORM: action attribute points to a form handler (to be configured on server) -->
+        <form id="enquiryForm" action="#" method="POST" novalidate>
+
+          <h2 class="form-section-title">Your Details</h2>
+
+          <!-- Full Name -->
+          <div class="form-group">
+            <label for="fullName">Full Name <span class="required" aria-hidden="true">*</span></label>
+            <input type="text"
+                   id="fullName"
+                   name="fullName"
+                   placeholder="e.g. Thabo Nkosi"
+                   required
+                   minlength="2"
+                   maxlength="100"
+                   aria-required="true" />
+            <span class="error-msg" id="fullNameError" role="alert"></span>
+          </div>
+
+          <!-- Phone Number -->
+          <div class="form-group">
+            <label for="phone">Phone Number <span class="required" aria-hidden="true">*</span></label>
+            <input type="tel"
+                   id="phone"
+                   name="phone"
+                   placeholder="e.g. 0712345678"
+                   required
+                   pattern="[0-9]{10}"
+                   maxlength="10"
+                   aria-required="true" />
+            <span class="error-msg" id="phoneError" role="alert"></span>
+          </div>
+
+          <!-- Email Address -->
+          <div class="form-group">
+            <label for="email">Email Address <span class="required" aria-hidden="true">*</span></label>
+            <input type="email"
+                   id="email"
+                   name="email"
+                   placeholder="e.g. thabo@email.com"
+                   required
+                   aria-required="true" />
+            <span class="error-msg" id="emailError" role="alert"></span>
+          </div>
+
+          <h2 class="form-section-title">Order Details</h2>
+
+          <!-- Product Type -->
+          <div class="form-group">
+            <label for="productType">Product Type <span class="required" aria-hidden="true">*</span></label>
+            <select id="productType" name="productType" required aria-required="true">
+              <option value="">-- Select a product --</option>
+              <option value="birthday-cake">Birthday Cake</option>
+              <option value="wedding-cake">Wedding Cake</option>
+              <option value="corporate-cake">Corporate Branded Cake</option>
+              <option value="kids-cake">Kids' Theme Cake</option>
+              <option value="cupcakes">Cupcakes</option>
+              <option value="pastries">Pastries / Platter</option>
+              <option value="other">Other (describe below)</option>
+            </select>
+            <span class="error-msg" id="productTypeError" role="alert"></span>
+          </div>
+
+          <!-- Number of People / Serves -->
+          <div class="form-group">
+            <label for="serves">Number of People to Serve <span class="required" aria-hidden="true">*</span></label>
+            <input type="number"
+                   id="serves"
+                   name="serves"
+                   placeholder="e.g. 30"
+                   min="1"
+                   max="500"
+                   required
+                   aria-required="true" />
+            <span class="error-msg" id="servesError" role="alert"></span>
+          </div>
+
+          <!-- Event Date -->
+          <div class="form-group">
+            <label for="eventDate">Event Date <span class="required" aria-hidden="true">*</span></label>
+            <input type="date"
+                   id="eventDate"
+                   name="eventDate"
+                   required
+                   aria-required="true" />
+            <span class="error-msg" id="eventDateError" role="alert"></span>
+          </div>
+
+          <!-- Delivery or Collection -->
+          <div class="form-group">
+            <fieldset>
+              <legend>Delivery or Collection? <span class="required" aria-hidden="true">*</span></legend>
+              <label class="radio-label">
+                <input type="radio" name="deliveryOption" value="delivery" required /> Delivery (Kagiso &amp; surrounding areas)
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="deliveryOption" value="collection" /> Collection (Kagiso)
+              </label>
+            </fieldset>
+            <span class="error-msg" id="deliveryError" role="alert"></span>
+          </div>
+
+          <!-- Design Description -->
+          <div class="form-group">
+            <label for="designDetails">Design / Theme Description <span class="required" aria-hidden="true">*</span></label>
+            <textarea id="designDetails"
+                      name="designDetails"
+                      rows="5"
+                      placeholder="Describe your cake design, colours, theme, flavour preferences, or any special requests..."
+                      required
+                      minlength="20"
+                      maxlength="1000"
+                      aria-required="true"></textarea>
+            <span class="error-msg" id="designDetailsError" role="alert"></span>
+          </div>
+
+          <!-- Budget Range -->
+          <div class="form-group">
+            <label for="budget">Approximate Budget (ZAR)</label>
+            <select id="budget" name="budget">
+              <option value="">-- Select budget range --</option>
+              <option value="under-300">Under R 300</option>
+              <option value="300-600">R 300 – R 600</option>
+              <option value="600-1000">R 600 – R 1 000</option>
+              <option value="1000-2000">R 1 000 – R 2 000</option>
+              <option value="over-2000">Over R 2 000</option>
+            </select>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary btn-full">Submit Order Enquiry</button>
+
+        </form>
+
+        <!-- Estimated price response area: populated by JavaScript after form submission -->
+        <div id="quoteResponse" class="quote-response" aria-live="polite"></div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p class="footer-logo">🎂 Keitu's Cake &amp; Bakery</p>
+        <p>Handcrafted with love in Kagiso, Gauteng.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="enquiry.html">Order</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <p>📍 Kagiso, Gauteng</p>
+        <p>📞 +27 00 000 0000</p>
+        <p>📧 hello@keituscakeandbakery.co.za</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Keitu's Cake and Bakery. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
